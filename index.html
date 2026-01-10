@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Robin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= ACCUEIL ================= -->
+<header class="hero" id="accueil">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-left">
+
+      <!-- LOGO -->
+      <a href="#accueil">
+        <img src="logo.png" class="logo-img" alt="BNR logo">
+      </a>
+
+      <!-- MENU -->
+      <div class="menu-left">
+        <a href="#accueil">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projects">Mes Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- TELECHARGER RESUME -->
+    <a href="soutien.html" class="btn-resume">M'aider dans mes projects</a>
+  </nav>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+    <span class="hello">Bonjour, je m'appelle Robin</span>
+    <h1>Web Developer</h1>
+    <p>Développeur web passionné par les interfaces modernes et performantes.</p>
+    <a href="#contact" class="btn-main">Me Contacter</a>
+  </div>
+
+</header>
+
+<!-- ================= COMPETENCES ================= -->
+<section class="skills" id="competences">
+  <h1>Compétences</h1>
+
+  <div class="skills-grid">
+
+    <a href="competence-web.html" class="skill-card">
+      <img src="developpeur_web.png">
+      <h3>Développeur Web</h3>
+      <p>Création de sites web modernes.</p>
+    </a>
+
+    <a href="competence-design.html" class="skill-card">
+      <img src="web_disign.png">
+      <h3>Web Design</h3>
+      <p>Conception UI/UX avec Figma.</p>
+    </a>
+
+    <a href="competence-video.html" class="skill-card">
+      <img src="montage_vidéo.png">
+      <h3>Montage Vidéo</h3>
+      <p>Premiere Pro & After Effects.</p>
+    </a>
+
+    <a href="competence-graphic.html" class="skill-card">
+      <img src="graphic_design.png">
+      <h3>Graphic Design</h3>
+      <p>Création de visuels et branding.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="projects" id="projects">
+  <h1>Mes Projets</h1>
+
+  <!-- FILTRES -->
+  <div class="project-filters">
+    <button data-filter="all" class="active">Tout</button>
+    <button data-filter="web">Développeur Web</button>
+    <button data-filter="design">Web Design</button>
+    <button data-filter="video">Montage Vidéo</button>
+    <button data-filter="graphic">Graphic Design</button>
+  </div>
+
+  <!-- PROJETS -->
+  <div class="project-grid">
+
+    <a href="project-parfum.html" class="project-card" data-category="graphic">
+      <img src="parfum-Récupéré copie.jpg">
+      <h4>Affiche Parfum</h4>
+      <p>Landing page moderne.</p>
+    </a>
+
+    <a href="project-cgw.html" class="project-card" data-category="graphic">
+      <img src="CGW copie.jpg">
+      <h4>Corsica Games Week</h4>
+      <p>Affiche événementielle.</p>
+    </a>
+
+    <a href="project-taxi.html" class="project-card" data-category="graphic">
+      <img src="TourEiffel copie.jpg">
+      <h4>Affiche Film Taxi 2</h4>
+      <p>Direction artistique.</p>
+    </a>
+
+    <a href="project-minichat.html" class="project-card" data-category="web">
+      <img src="mini_chat.png">
+      <h4>Mini Chat</h4>
+      <p>Application web interactive.</p>
+    </a>
+<!-- ================= En cours ================= -->
+    <a href="projects-portraitchinois.html" class="project-card" data-category="graphic">
+      <img src="chinois.png">
+      <h4>Portrait Vectoriser</h4>
+      <p>Design Illustrator.</p>
+    </a>
+
+    <a href="project-creatorhighlights.html" class="project-card" data-category="web">
+      <img src="creator highlights.png">
+      <h4>Creator Highlights</h4>
+      <p>Site HTML-CSS</p>
+    </a>
+
+    <a href="project-dalton.html" class="project-card" data-category="graphic">
+      <img src="dalton.png">
+      <h4>Design Dalton</h4>
+      <p>Design Illustrator.</p>
+    </a>
+
+    <a href="project-portfolio.html" class="project-card" data-category="design">
+      <img src="portfolio.png">
+      <h4>Maquette Portfolio Final</h4>
+      <p>Design Web Figma.</p>
+    </a>
+
+     <a href="project-portfolio-test.html" class="project-card" data-category="design">
+      <img src="portfolio_maquette1.png">
+      <h4>Maquette Portfolio Test</h4>
+      <p>Design Web Figma.</p>
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
+  <h2>Me Contacter</h2>
+  <p>Étudiant MMI – apprendre, créer, évoluer.</p>
+
+  <div class="contact-form">
+    <input type="email" placeholder="Entrez votre E-mail">
+    <button>Contactez moi</button>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <a href="#accueil"><img src="logo.png" class="footer-logo"></a>
+
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/profile.php?id=61554994092970" target="_blank"><img src="facebook.png"></a>
+    <a href="https://x.com/RobNikus35888" target="_blank"><img src="twitter.png"></a>
+    <a href="https://www.instagram.com/bnr_7823/" target="_blank"><img src="instagram.png"></a>
+    <a href="https://www.linkedin.com/in/robin-faure-4a9012307/" target="_blank"><img src="linkedin.png"></a>
+  </div>
+
+  <p>© 2025 BNR. All Rights Reserved, Inc.</p>
+</footer>
+
+<!-- SCRIPT FILTRAGE -->
+<script src="script.js"></script>
+
+</body>
+</html>
