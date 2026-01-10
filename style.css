@@ -572,7 +572,7 @@ a {
   /* ---------- HERO ---------- */
   .hero {
     height: 100vh;
-    background: url("avatar.png") center / cover no-repeat;
+    background: url("avatar_mobile.jpg") center / cover no-repeat;
     padding: 0;
   }
 
