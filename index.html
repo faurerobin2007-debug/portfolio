@@ -13,6 +13,16 @@
 
   <!-- NAV -->
   <nav class="nav">
+    <!-- BURGER -->
+<div class="burger"></div>
+<div class="burger-menu">
+  <a href="#accueil">Accueil</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projects">Mes Projets</a>
+  <a href="#contact">Contact</a>
+  <a href="don.html">M’aider pour mes projets</a>
+</div>
+
     <div class="nav-left">
 
       <!-- LOGO -->
@@ -176,6 +186,16 @@
 
 <!-- SCRIPT FILTRAGE -->
 <script src="script.js"></script>
+
+<script>
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.burger-menu');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+</script>
+
 
 </body>
 </html>

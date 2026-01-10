@@ -539,40 +539,75 @@ a {
 
 /* ================= MOBILE ================= */
 /* ================= VERSION MOBILE PRO ================= */
+/* ================= VERSION MOBILE - MENU BURGER ================= */
+/* ================= VERSION MOBILE - MENU BURGER SEULEMENT ================= */
 @media (max-width: 768px) {
 
   /* ---------- NAV ---------- */
-  .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 16px 20px;
-    flex-direction: row;
-  }
-
   .nav-left {
-    gap: 0;
+    display: none; /* masque le menu desktop */
   }
 
-  .menu-left {
-    display: none; /* on cache le menu desktop */
+  .burger {
+    display: block; /* menu burger visible uniquement mobile */
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px;
   }
 
-  .logo-img {
-    width: 90px;
+  .burger::before,
+  .burger::after {
+    content: "";
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
   }
 
-  .btn-resume {
-    padding: 10px 16px;
-    font-size: 13px;
-    border-radius: 25px;
+  .burger::before {
+    top: -8px;
+  }
+
+  .burger::after {
+    top: 8px;
+  }
+
+  .burger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 220px;
+    height: 100%;
+    background: #050200;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 100px 20px;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+
+  .burger-menu a,
+  .burger-menu button {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .burger-menu.active {
+    right: 0;
   }
 
   /* ---------- HERO ---------- */
   .hero {
     height: 100vh;
-    background: url("avatar_mobile.jpg") center / cover no-repeat;
+    background: url("avatar.png") center / cover no-repeat;
     padding: 0;
   }
 
@@ -681,6 +716,12 @@ a {
     font-size: 14px;
   }
 
+  .contact-form button {
+    background: orange; /* couleur comme desktop */
+    color: #050200;
+    font-weight: bold;
+  }
+
   /* ---------- FOOTER ---------- */
   .footer {
     padding: 40px 20px;
@@ -689,5 +730,16 @@ a {
   .footer-logo {
     width: 120px;
   }
+}
 
+/* ---------- DESKTOP - MENU NORMAL ---------- */
+@media (min-width: 769px) {
+  .burger,
+  .burger-menu {
+    display: none; /* menu burger invisible sur desktop */
+  }
+
+  .nav-left {
+    display: flex; /* menu desktop visible */
+  }
 }
