@@ -541,22 +541,26 @@ a {
 /* ================= VERSION MOBILE PRO ================= */
 /* ================= VERSION MOBILE - MENU BURGER ================= */
 /* ================= VERSION MOBILE - MENU BURGER SEULEMENT ================= */
+/* ================= VERSION MOBILE - MENU BURGER + M'AIDER ================= */
 @media (max-width: 768px) {
 
   /* ---------- NAV ---------- */
   .nav-left {
-    display: none; /* masque le menu desktop */
+    display: none; /* masque menu desktop */
   }
 
+  /* Burger menu en haut à gauche */
   .burger {
-    display: block; /* menu burger visible uniquement mobile */
+    display: block;
     width: 28px;
     height: 3px;
     background-color: white;
-    position: relative;
+    position: absolute;
+    top: 16px;
+    left: 20px;
     cursor: pointer;
+    z-index: 101;
     transition: all 0.3s ease;
-    margin-left: 20px;
   }
 
   .burger::before,
@@ -570,14 +574,24 @@ a {
     transition: all 0.3s ease;
   }
 
-  .burger::before {
-    top: -8px;
+  .burger::before { top: -8px; }
+  .burger::after { top: 8px; }
+
+  /* Bouton M'AIDER en haut à droite */
+  .btn-resume {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    padding: 8px 14px;
+    font-size: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: orange;
+    color: #050200;
+    z-index: 101;
   }
 
-  .burger::after {
-    top: 8px;
-  }
-
+  /* Menu burger déroulant */
   .burger-menu {
     position: fixed;
     top: 0;
@@ -590,7 +604,7 @@ a {
     gap: 25px;
     padding: 100px 20px;
     transition: right 0.3s ease;
-    z-index: 99;
+    z-index: 100;
   }
 
   .burger-menu a,
@@ -600,14 +614,12 @@ a {
     text-decoration: none;
   }
 
-  .burger-menu.active {
-    right: 0;
-  }
+  .burger-menu.active { right: 0; }
 
   /* ---------- HERO ---------- */
   .hero {
     height: 100vh;
-    background: url("avatar.png") center / cover no-repeat;
+    background: url("avatar_mobile.jpg") center / cover no-repeat;
     padding: 0;
   }
 
@@ -621,26 +633,10 @@ a {
     text-align: left;
   }
 
-  .hero-content span {
-    font-size: 14px;
-    opacity: 0.9;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-    line-height: 1.2;
-    margin: 12px 0;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .btn-main {
-    padding: 12px 20px;
-    font-size: 14px;
-  }
+  .hero-content span { font-size: 14px; opacity: 0.9; }
+  .hero-content h1 { font-size: 36px; line-height: 1.2; margin: 12px 0; }
+  .hero-content p { font-size: 15px; margin-bottom: 18px; }
+  .btn-main { padding: 12px 20px; font-size: 14px; }
 
   /* ---------- SECTIONS ---------- */
   .skills,
@@ -656,80 +652,48 @@ a {
   }
 
   /* ---------- SKILLS ---------- */
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .skill-card {
-    padding: 20px;
-  }
+  .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+  .skill-card { padding: 20px; }
 
   /* ---------- PROJECTS ---------- */
-  .project-filters {
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 35px;
-  }
-
-  .project-filters button {
-    padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 16px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .project-card img {
-    height: 180px;
-  }
-
-  .project-card h4 {
-    font-size: 16px;
-  }
-
-  .project-card p {
-    font-size: 14px;
-  }
+  .project-filters { gap: 8px; flex-wrap: wrap; margin-bottom: 35px; }
+  .project-filters button { padding: 6px 12px; font-size: 12px; border-radius: 16px; }
+  .project-grid { grid-template-columns: 1fr; gap: 22px; }
+  .project-card img { height: 180px; }
+  .project-card h4 { font-size: 16px; }
+  .project-card p { font-size: 14px; }
 
   /* ---------- CONTACT ---------- */
-  .contact-section {
-    padding: 100px 20px;
-  }
-
-  .contact-section h2 {
-    font-size: 36px;
-  }
+  .contact-section { padding: 100px 20px; }
+  .contact-section h2 { font-size: 36px; }
 
   .contact-form {
     flex-direction: column;
     gap: 14px;
   }
 
-  .contact-form input,
+  /* Bouton contact orange partout */
   .contact-form button {
     width: 100%;
     padding: 14px 18px;
     font-size: 14px;
-  }
-
-  .contact-form button {
-    background: orange; /* couleur comme desktop */
+    background: orange; /* comme desktop */
     color: #050200;
     font-weight: bold;
+    border-radius: 40px;
+  }
+
+  .contact-form input {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 14px;
+    border-radius: 40px;
   }
 
   /* ---------- FOOTER ---------- */
-  .footer {
-    padding: 40px 20px;
-  }
+  .footer { padding: 40px 20px; }
+  .footer-logo { width: 120px; }
 
-  .footer-logo {
-    width: 120px;
-  }
 }
 
 /* ---------- DESKTOP - MENU NORMAL ---------- */
@@ -739,7 +703,5 @@ a {
     display: none; /* menu burger invisible sur desktop */
   }
 
-  .nav-left {
-    display: flex; /* menu desktop visible */
-  }
+  .nav-left { display: flex; } /* menu desktop visible */
 }
