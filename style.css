@@ -90,14 +90,31 @@ body {
   margin-bottom: 25px;
 }
 
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 145, 71, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 133, 39, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
+}
+
 .btn-main {
-  background: orange;
-  color: #050200;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
+    background: #ffa500;
+    color: #050200;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    animation: pulse 2s ease infinite;
 }
 
 .btn-main:hover {
@@ -118,11 +135,24 @@ body {
   margin-bottom: 60px;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin-top: 40px;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 .skill-card {
@@ -156,13 +186,37 @@ body {
 
 
 /* PROJECTS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .projects {
   padding: 80px;
   text-align: center;
+  animation: fadeIn 0.6s ease forwards;
 }
+
 
 .projects h1 {
   margin-bottom: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -170,6 +224,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 
@@ -181,6 +236,19 @@ body {
   margin-bottom: 50px;
 }
 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .project-filters button {
   background: transparent;
   border: 1px solid orange;
@@ -188,6 +256,7 @@ body {
   padding: 8px 18px;
   border-radius: 20px;
   cursor: pointer;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 .project-filters .active,
@@ -663,6 +732,92 @@ a {
   .project-card h4 { font-size: 16px; }
   .project-card p { font-size: 14px; }
 
+
+
+/* ================= AVIS ================= */
+
+.reviews {
+  padding: 80px 10%;
+  background: #0f0f0f;
+}
+
+.reviews h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #2a1b12);
+  padding: 35px;
+  border-radius: 25px;
+  color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.quote {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 60px;
+  opacity: 0.2;
+}
+
+.review-text {
+  margin-top: 40px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.review-footer img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name {
+  font-weight: 600;
+}
+
+.review-role {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.review-stars {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #f5b301;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  
   /* ---------- CONTACT ---------- */
   .contact-section { padding: 100px 20px; }
   .contact-section h2 { font-size: 36px; }
