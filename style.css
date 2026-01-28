@@ -552,12 +552,12 @@ a {
   /* Burger menu en haut à gauche */
   .burger {
     display: block;
-    width: 30px;
+    width: 28px;
     height: 3px;
     background-color: white;
     position: absolute;
-    top: 35px;
-    left: 35px;
+    top: 16px;
+    left: 20px;
     cursor: pointer;
     z-index: 101;
     transition: all 0.3s ease;
@@ -580,8 +580,8 @@ a {
   /* Bouton M'AIDER en haut à droite */
   .btn-resume {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 14px;
+    right: 20px;
     padding: 8px 14px;
     font-size: 12px;
     border-radius: 25px;
@@ -614,7 +614,7 @@ a {
     text-decoration: none;
   }
 
-  .burger-menu.active { left: 0; }
+  .burger-menu.active { right: 0; }
 
   /* ---------- HERO ---------- */
   .hero {
